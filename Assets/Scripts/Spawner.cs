@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Spawner : MonoBehaviour
 {
     public GameObject unitPrefab;
     public AttackButton attackButton;
-    public void Spawn(Vector3 unitTarget)
+
+    public GameObject Spawn(Vector3 unitTarget)
     {
-        var move = Instantiate(unitPrefab, transform.position, Quaternion.identity).GetComponent<MoveComponent>();
-        move.agent.SetDestination(unitTarget);
+        var res = Instantiate(unitPrefab, transform.position, Quaternion.identity);
+        var move = res.GetComponent<NavMeshAgent>();
+        move.SetDestination(unitTarget);
         if (attackButton != null)
         {
-            attackButton.moveComponents.Add(move);
+            attackButton.agents.Add(move);
         }
+        return res;
     }
+
 }

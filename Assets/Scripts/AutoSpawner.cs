@@ -9,6 +9,9 @@ public class AutoSpawner : MonoBehaviour
     public float spawnCooldown;
     public float lastSpawnTime;
     public Transform target;
+    public List<Transform> patrolPath = new List<Transform>();
+    public float patrolIdleTime;
+    public float remainingDistance;
     private Spawner spawner;
     
     private void Awake()
@@ -21,7 +24,14 @@ public class AutoSpawner : MonoBehaviour
         if (Time.time - lastSpawnTime >= spawnCooldown)
         {
             lastSpawnTime = Time.time;
-            spawner.Spawn(target.position);
+            var obj = spawner.Spawn(target.position);
+            if (patrolPath.Count > 0)
+            {
+                var patrolComponent = obj.AddComponent<PatrolComponent>();
+                patrolComponent.wps = patrolPath;
+                patrolComponent.remainingDistance = remainingDistance;
+                patrolComponent.patrolIdleTime = patrolIdleTime;
+            }
         }
     }
 }

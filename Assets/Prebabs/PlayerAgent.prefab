@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4815184441042505618}
   - component: {fileID: 4815184441042505619}
   - component: {fileID: 4815184441042505644}
-  - component: {fileID: 4815184441042505645}
   m_Layer: 0
   m_Name: PlayerAgent
   m_TagString: Untagged
@@ -76,19 +75,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   cameraMain: {fileID: 0}
---- !u!114 &4815184441042505645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4815184441042505646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 975d9a3c696d4480921b4152fa0f0953, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agent: {fileID: 0}
 --- !u!1 &4815184441739942948
 GameObject:
   m_ObjectHideFlags: 0

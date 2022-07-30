@@ -2,16 +2,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerMoveComponent : MonoBehaviour
 {
     public LayerMask raycastTarget;
     public Camera cameraMain;
-    private MoveComponent moveComponent;
+    private NavMeshAgent agent;
 
     private void Awake()
     {
-        moveComponent = GetComponent<MoveComponent>();
+        agent = GetComponent<NavMeshAgent>();
     }
 
     private void Update()
@@ -20,7 +21,7 @@ public class PlayerMoveComponent : MonoBehaviour
         {
             var ray = cameraMain.ScreenPointToRay(Input.mousePosition);
             Physics.Raycast(ray, out RaycastHit hitInfo, Mathf.Infinity, raycastTarget);
-            moveComponent.agent.SetDestination(hitInfo.point);
+            agent.SetDestination(hitInfo.point);
         }
     }
 }
