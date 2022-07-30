@@ -1,28 +1,29 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class AttackButton : MonoBehaviour
 {
     public Transform attackTarget;
-    public List<MoveComponent> moveComponents;
+    public List<NavMeshAgent> agents;
 
     public void Attack()
     {
         int i = 0;
-        while (i < moveComponents.Count)
+        while (i < agents.Count)
         {
-            if (moveComponents[i] == null)
-                moveComponents.Remove(moveComponents[i]);
+            if (agents[i] == null)
+                agents.Remove(agents[i]);
             else
                 i++;
         }
-        foreach (var moveComponent in moveComponents)
+        foreach (var moveComponent in agents)
         {
             if (moveComponent == null)
-                moveComponents.Remove(moveComponent);
+                agents.Remove(moveComponent);
             else
-                moveComponent.agent.SetDestination(attackTarget.position);
+                moveComponent.SetDestination(attackTarget.position);
         }
     }
 }

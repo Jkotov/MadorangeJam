@@ -6,12 +6,21 @@ public class AttackComponent : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public float attackCooldown;
+    public string[] targetTagPriority;
     private float lastAttackTime;
     private TeamComponent teamComponent;
+    private Collider col;
 
     private void Awake()
     {
+        col = GetComponent<Collider>();
         teamComponent = GetComponent<TeamComponent>();
+    }
+
+
+    private void OnCollisionStay(Collision collisionInfo)
+    {
+        throw new NotImplementedException();
     }
 
     private void OnTriggerStay(Collider other)
