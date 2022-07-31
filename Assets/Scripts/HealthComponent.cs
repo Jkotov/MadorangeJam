@@ -25,6 +25,8 @@ public class HealthComponent : MonoBehaviour
     public float health;
     public void Die()
     {
+        if (TryGetComponent(out SpawnToTarget spawnToTarget))
+            spawnToTarget.Spawn();
         if (objectForDestroy != null)
             Destroy(objectForDestroy);
         Destroy(gameObject);

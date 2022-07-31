@@ -1,17 +1,17 @@
 fileFormatVersion: 2
-guid: 0c0698765bc0b7be59a9b128ca0b8444
+guid: 6782df89614c806c3ab238b7f11d135c
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable:
   - first:
-      74: 8091488675739188508
-    second: Armature|b_dance_baked
+      74: -1978303741906493279
+    second: Armature|idle
   - first:
-      74: -3310622915011384403
-    second: Armature|Dance_baked
+      74: 3557367340605095810
+    second: Armature|wamk
   - first:
-      74: 4985908275672197927
-    second: Armature|Run_baked
+      74: -4415952777257699919
+    second: Armature|wamk (1)
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -42,11 +42,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Armature|b_dance_baked
-      takeName: Armature|b_dance_baked
+      name: Armature|idle
+      takeName: Armature|idle
       internalID: 0
       firstFrame: 0
-      lastFrame: 36
+      lastFrame: 27
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -71,40 +71,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature|Dance_baked
-      takeName: Armature|Dance_baked
+      name: Armature|wamk
+      takeName: Armature|wamk
       internalID: 0
       firstFrame: 0
-      lastFrame: 51
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 1
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Armature|Run_baked
-      takeName: Armature|Run_baked
-      internalID: 0
-      firstFrame: 0
-      lastFrame: 18
+      lastFrame: 27
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -195,7 +166,7 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
-  remapMaterialsIfMaterialImportModeIsNone: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

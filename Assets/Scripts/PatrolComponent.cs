@@ -7,7 +7,6 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class PatrolComponent : MonoBehaviour
 {
-    public float remainingDistance;
     public List<Transform> wps;
     public float patrolIdleTime;
     private float startIdleTime;
@@ -22,7 +21,7 @@ public class PatrolComponent : MonoBehaviour
 
     private void Update()
     {
-        if (!(agent.remainingDistance <= remainingDistance)) return;
+        if (agent.remainingDistance >= agent.stoppingDistance) return;
         
         if (Time.time > startIdleTime && !idling)
         {
@@ -31,7 +30,7 @@ public class PatrolComponent : MonoBehaviour
         }
         if (Time.time > startIdleTime + patrolIdleTime)
         {
-            agent.SetDestination(wps[currentWp % (wps.Count - 1)].position);
+            agent.SetDestination(wps[currentWp % wps.Count].position);
             currentWp++;
             idling = false;
         }

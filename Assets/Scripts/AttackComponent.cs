@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(TeamComponent))]
@@ -6,21 +7,37 @@ public class AttackComponent : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public float attackCooldown;
-    public string[] targetTagPriority;
+    public List<string> targetTagPriority;
     private float lastAttackTime;
     private TeamComponent teamComponent;
-    private Collider col;
+    private readonly Dictionary<string, List<Collider>> enemies = new Dictionary<string, List<Collider>>();
 
     private void Awake()
     {
-        col = GetComponent<Collider>();
+        foreach (var targetTag in targetTagPriority)
+        {
+            enemies.Add(targetTag, new List<Collider>());
+        }
         teamComponent = GetComponent<TeamComponent>();
     }
-
-
-    private void OnCollisionStay(Collision collisionInfo)
+    private void Update()
     {
-        throw new NotImplementedException();
+        for (int i = 0; i < targetTagPriority.Count; i++)
+        {
+            foreach (var enemy in enemies[targetTagPriority[i]])
+            {
+                if (enemy == null)
+                    continue;
+                lastAttackTime = Time.time;
+                Attack(enemy.transform);
+                goto Attacked;
+            }
+        } 
+        Attacked:
+        foreach (var enemyPair in enemies)
+        {
+            enemyPair.Value.Clear();
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -29,11 +46,10 @@ public class AttackComponent : MonoBehaviour
             return;
         if (other.GetComponent<TeamComponent>().team == teamComponent.team)
             return;
-        if (Time.time - lastAttackTime >= attackCooldown)
-        {
-            lastAttackTime = Time.time;
-            Attack(other.transform);
-        }
+        if (!(Time.time - lastAttackTime >= attackCooldown)) return;
+        if (!targetTagPriority.Contains(other.tag))
+            return;
+        enemies[other.tag].Add(other);
     }
 
     public void Attack(Transform target)

@@ -52,4 +52,15 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.TryGetComponent(out HealthComponent health))
+        {
+            if (health.teamComponent.team == teamComponent.team)
+                return;
+            health.Health -= damage;
+            Destroy(gameObject);
+        }
+    }
 }

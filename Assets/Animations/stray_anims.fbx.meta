@@ -1,17 +1,23 @@
 fileFormatVersion: 2
-guid: 0c0698765bc0b7be59a9b128ca0b8444
+guid: 75feef4baa5a65430be4ae65b54d81d1
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable:
   - first:
-      74: 8091488675739188508
-    second: Armature|b_dance_baked
+      74: -47757044105611666
+    second: Armature|Attack_01
   - first:
-      74: -3310622915011384403
-    second: Armature|Dance_baked
+      74: 8416408570801230831
+    second: Armature|Attack_02
   - first:
-      74: 4985908275672197927
-    second: Armature|Run_baked
+      74: -1978303741906493279
+    second: Armature|idle
+  - first:
+      74: 3450630758922471195
+    second: Armature|idle_transition
+  - first:
+      74: 1303299601406483602
+    second: Armature|run
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -42,11 +48,69 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Armature|b_dance_baked
-      takeName: Armature|b_dance_baked
+      name: Armature|Attack_01
+      takeName: Armature|Attack_01
       internalID: 0
       firstFrame: 0
-      lastFrame: 36
+      lastFrame: 6
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Attack_02
+      takeName: Armature|Attack_02
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 41
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|idle
+      takeName: Armature|idle
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 60
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -71,11 +135,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature|Dance_baked
-      takeName: Armature|Dance_baked
+      name: Armature|idle_transition
+      takeName: Armature|idle_transition
       internalID: 0
       firstFrame: 0
-      lastFrame: 51
+      lastFrame: 68
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -83,7 +147,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 0
-      loopBlend: 1
+      loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -100,11 +164,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature|Run_baked
-      takeName: Armature|Run_baked
+      name: Armature|run
+      takeName: Armature|run
       internalID: 0
       firstFrame: 0
-      lastFrame: 18
+      lastFrame: 26
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -195,7 +259,7 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
-  remapMaterialsIfMaterialImportModeIsNone: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

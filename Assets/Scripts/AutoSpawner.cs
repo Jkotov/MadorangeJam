@@ -11,7 +11,7 @@ public class AutoSpawner : MonoBehaviour
     public Transform target;
     public List<Transform> patrolPath = new List<Transform>();
     public float patrolIdleTime;
-    public float remainingDistance;
+    public Transform onDeathTarget;
     private Spawner spawner;
     
     private void Awake()
@@ -29,9 +29,10 @@ public class AutoSpawner : MonoBehaviour
             {
                 var patrolComponent = obj.AddComponent<PatrolComponent>();
                 patrolComponent.wps = patrolPath;
-                patrolComponent.remainingDistance = remainingDistance;
                 patrolComponent.patrolIdleTime = patrolIdleTime;
             }
+            if (onDeathTarget != null && obj.TryGetComponent(out SpawnToTarget spawnerOnDeath))
+                spawnerOnDeath.target = onDeathTarget;
         }
     }
 }
