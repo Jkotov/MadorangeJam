@@ -9,10 +9,10 @@ public class AttackComponent : MonoBehaviour
     public float attackCooldown;
     public List<string> targetTagPriority;
     private float lastAttackTime;
-    private TeamComponent teamComponent;
+    protected TeamComponent teamComponent;
     private readonly Dictionary<string, List<Collider>> enemies = new Dictionary<string, List<Collider>>();
 
-    private void Awake()
+    protected virtual void Awake()
     {
         foreach (var targetTag in targetTagPriority)
         {
@@ -52,7 +52,7 @@ public class AttackComponent : MonoBehaviour
         enemies[other.tag].Add(other);
     }
 
-    public void Attack(Transform target)
+    public virtual void Attack(Transform target)
     {
         var bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity).GetComponent<Bullet>();
         bullet.Target = target;

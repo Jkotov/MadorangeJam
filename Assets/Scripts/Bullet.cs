@@ -38,6 +38,8 @@ public class Bullet : MonoBehaviour
                 Destroy(gameObject);
                 yield break;
             }
+            transform.LookAt(target);
+            transform.rotation = Quaternion.Euler(new Vector3(0, transform.rotation.eulerAngles.y, 0));
             transform.position += speed * Time.deltaTime * (Target.position - transform.position).normalized;
         }
     }

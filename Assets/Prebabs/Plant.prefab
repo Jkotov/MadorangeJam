@@ -139,6 +139,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantTower_anims
       objectReference: {fileID: 0}
+    - target: {fileID: 4656498206809007282, guid: 76789f743614964ed9061a2e1a6bea75, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 00de6dc30286a0b419a1dca876112a33, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76789f743614964ed9061a2e1a6bea75, type: 3}
 --- !u!4 &5989506289714888574 stripped
