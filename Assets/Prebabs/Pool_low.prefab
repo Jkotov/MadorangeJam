@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d17ef8cee5a758fbab2493d8d461c0e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 5
+  lifetime: 50
 --- !u!135 &8271269609242017535
 SphereCollider:
   m_ObjectHideFlags: 0

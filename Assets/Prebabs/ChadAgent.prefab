@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1226319674206211346}
   - component: {fileID: 8900463237859972782}
   - component: {fileID: 1888933678644031232}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ChadAgent
   m_TagString: Chad
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 2.64
-  m_Speed: 3.5
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -138,9 +138,113 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8359054807397518109, guid: a6a720a7f574af379824790a04b7b2dd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -7410490168615079185, guid: a6a720a7f574af379824790a04b7b2dd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -6845168376651781299, guid: a6a720a7f574af379824790a04b7b2dd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -6218043361409601406, guid: a6a720a7f574af379824790a04b7b2dd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -6008012212651258535, guid: a6a720a7f574af379824790a04b7b2dd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -5071797001517877724, guid: a6a720a7f574af379824790a04b7b2dd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -5026851437314943344, guid: a6a720a7f574af379824790a04b7b2dd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -2558687648214775394, guid: a6a720a7f574af379824790a04b7b2dd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -2444566953878671145, guid: a6a720a7f574af379824790a04b7b2dd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -2106739115399079824, guid: a6a720a7f574af379824790a04b7b2dd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -1411713068620591153, guid: a6a720a7f574af379824790a04b7b2dd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -115121766284387860, guid: a6a720a7f574af379824790a04b7b2dd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 325163932100842318, guid: a6a720a7f574af379824790a04b7b2dd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a6a720a7f574af379824790a04b7b2dd, type: 3}
       propertyPath: m_Name
       value: Doggo_chad_anims
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a6a720a7f574af379824790a04b7b2dd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2441088385215794626, guid: a6a720a7f574af379824790a04b7b2dd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3421635597625944022, guid: a6a720a7f574af379824790a04b7b2dd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525958626726051044, guid: a6a720a7f574af379824790a04b7b2dd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251560555646771477, guid: a6a720a7f574af379824790a04b7b2dd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847002820432774016, guid: a6a720a7f574af379824790a04b7b2dd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068147578134873597, guid: a6a720a7f574af379824790a04b7b2dd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5528860797864257434, guid: a6a720a7f574af379824790a04b7b2dd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609245878125499213, guid: a6a720a7f574af379824790a04b7b2dd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6315106766033740263, guid: a6a720a7f574af379824790a04b7b2dd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7036213049465896255, guid: a6a720a7f574af379824790a04b7b2dd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156094603372571814, guid: a6a720a7f574af379824790a04b7b2dd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8229121614590333987, guid: a6a720a7f574af379824790a04b7b2dd, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a720a7f574af379824790a04b7b2dd, type: 3}

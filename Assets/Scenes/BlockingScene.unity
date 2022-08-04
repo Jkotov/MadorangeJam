@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -356,6 +356,9 @@ MonoBehaviour:
   spawnCooldown: 5
   lastSpawnTime: 3.5
   target: {fileID: 842216826}
+  patrolPath: []
+  patrolIdleTime: 0
+  onDeathTarget: {fileID: 0}
 --- !u!114 &98622599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -446,7 +449,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &99742658
 PrefabInstance:
@@ -1713,7 +1716,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1949,7 +1952,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &783467155
 PrefabInstance:
@@ -2210,6 +2213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1420294559133118236, guid: 785e99427865afe158226b33f8331e99, type: 3}
   attackCooldown: 1
+  targetTagPriority: []
 --- !u!114 &856160844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2362,7 +2366,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: 30, z: 0}
 --- !u!1 &1014845642
 GameObject:
@@ -2400,6 +2404,9 @@ MonoBehaviour:
   spawnCooldown: 10
   lastSpawnTime: 2.5
   target: {fileID: 1014845648}
+  patrolPath: []
+  patrolIdleTime: 0
+  onDeathTarget: {fileID: 0}
 --- !u!114 &1014845644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2490,7 +2497,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1047696402
 PrefabInstance:
@@ -2585,6 +2592,9 @@ MonoBehaviour:
   spawnCooldown: 10
   lastSpawnTime: 1.5
   target: {fileID: 1098852905}
+  patrolPath: []
+  patrolIdleTime: 0
+  onDeathTarget: {fileID: 0}
 --- !u!114 &1098852901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2675,7 +2685,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1149195424
 GameObject:
@@ -2791,6 +2801,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1420294559133118236, guid: 785e99427865afe158226b33f8331e99, type: 3}
   attackCooldown: 1
+  targetTagPriority: []
 --- !u!114 &1149195431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3035,6 +3046,9 @@ MonoBehaviour:
   spawnCooldown: 15
   lastSpawnTime: 2
   target: {fileID: 842216826}
+  patrolPath: []
+  patrolIdleTime: 0
+  onDeathTarget: {fileID: 0}
 --- !u!114 &1223055551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3125,7 +3139,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1246046917
 PrefabInstance:
@@ -3214,6 +3228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -3304,7 +3319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackTarget: {fileID: 1412232017}
-  moveComponents: []
+  agents: []
 --- !u!114 &1292661280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3439,7 +3454,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3536,7 +3551,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3690,7 +3705,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3787,6 +3802,9 @@ MonoBehaviour:
   spawnCooldown: 10
   lastSpawnTime: 1
   target: {fileID: 0}
+  patrolPath: []
+  patrolIdleTime: 0
+  onDeathTarget: {fileID: 0}
 --- !u!114 &1443351841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3877,7 +3895,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 65
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1458354166
 GameObject:
@@ -3941,7 +3959,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -4195,7 +4214,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4449,7 +4468,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4949,8 +4968,7 @@ MonoBehaviour:
   raycastTarget:
     serializedVersion: 2
     m_Bits: 8
-  spawner: {fileID: 478780047}
-  moneyForSpawn: 2
+  spawners: []
   cameraMain: {fileID: 963194227}
 --- !u!4 &2014659135
 Transform:

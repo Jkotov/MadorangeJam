@@ -196,7 +196,6 @@ GameObject:
   - component: {fileID: 6455520206966352647}
   - component: {fileID: 6179191239467310526}
   - component: {fileID: 3806663523819772585}
-  - component: {fileID: 6258001545768983403}
   m_Layer: 0
   m_Name: AttackComponent
   m_TagString: Player
@@ -260,26 +259,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 10
+  m_Radius: 7.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6258001545768983403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4997893863630098206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b8bab805beb48edad1da593f52bb399, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 1420294559133118236, guid: 785e99427865afe158226b33f8331e99, type: 3}
-  attackCooldown: 0.5
-  targetTagPriority:
-  - Chims
-  attackPoint: {fileID: 434874693604259552}
-  timeBeforeAttack: 0.2
 --- !u!1 &5303490779678774318
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,7 +367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthComponent: {fileID: 6313098347118223783}
-  healSpeed: 0.1
+  healSpeed: 0.5
 --- !u!1 &8620354516048853028
 GameObject:
   m_ObjectHideFlags: 0
